@@ -63,7 +63,7 @@ while rodarMenu:
         print("----PESQUISAR ALUNO----")
         nome = input("Digite o nome do aluno: ")
 
-        for aluno in alunos: #!!!!!!!!
+        for aluno in alunos:
             if aluno[0] == nome:
                 print("---------------------")
                 print("Nome: ", aluno[0])
