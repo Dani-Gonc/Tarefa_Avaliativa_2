@@ -112,4 +112,4 @@ while rodarMenu:
 
     elif opcao == 6:
         print("----encerrando sistema----")
-        break
+        rodarMenu = False
