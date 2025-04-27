@@ -1,3 +1,4 @@
+
 #[nome, [T1,T2], [P1,P2],[MT,MP],MF]
 
 alunos = []
@@ -62,7 +63,7 @@ while rodarMenu:
     elif opcao == 2:
         print("----PESQUISAR ALUNO----")
         nome = input("Digite o nome do aluno: ")
-
+        encontrado = False
         for aluno in alunos:
             if aluno[0] == nome:
                 print("---------------------")
@@ -74,9 +75,11 @@ while rodarMenu:
                 print("Média teórica (MT): ", aluno[3][0])
                 print("Média prática (MP): ", aluno[3][1])
                 print("Média final (MF): ", aluno[4])
+                encontrado = True
                 break
-        
-        print("Aluno não encontrado!")
+
+        if not encontrado:
+            print("Aluno não encontrado!")
 
     elif opcao == 3:
         print("----ALUNO COM MAIOR MÉDIA FINAL (MF)----")
@@ -112,4 +115,5 @@ while rodarMenu:
 
     elif opcao == 6:
         print("----encerrando sistema----")
-        rodarMenu = False
+        rodarMenu = False
+
